@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.javastriker</groupId>
     <artifactId>emeka-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>emeka-pet-clinic</name>
     <description>emeka-pet-clinic</description>
     <properties>
@@ -50,7 +50,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com:ChukwuEmeka1269/emeka-pet-clinic.git</developerConnection>
-      <tag>emeka-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
