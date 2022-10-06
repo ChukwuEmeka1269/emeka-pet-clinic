@@ -8,4 +8,5 @@ public interface CrudService<T, ID> {
     Set<T> findAll();
     void delete(T object);
     void deleteById(ID id);
+    void deleteAll();
 }
