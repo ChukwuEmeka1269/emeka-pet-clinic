@@ -10,8 +10,24 @@
         <header>
             <h1>List of Vets</h1>
         </header>
-
         <p th:text="'List of vets'">List of Vets</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="vet : ${vets}">
+                    <td th:text="${vet.getId()}">1L</td>
+                    <td th:text="${vet.getFirstName()}">firstname</td>
+                    <td th:text="${vet.getLastName()}">Lastname</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

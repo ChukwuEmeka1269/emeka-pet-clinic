@@ -39,13 +39,13 @@ public class DataInitializer implements CommandLineRunner {
         System.out.println("Loading up Vets............");
         Vet vet1 = new Vet();
         vet1.setFirstName("Morris");
-        vet1.setFirstName("Chukwuebuka");
+        vet1.setLastName("Chukwuebuka");
         vet1.setId(1L);
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setFirstName("Rose");
-        vet2.setFirstName("Ade");
+        vet2.setLastName("Ade");
         vet2.setId(2L);
         vetService.save(vet2);
 
