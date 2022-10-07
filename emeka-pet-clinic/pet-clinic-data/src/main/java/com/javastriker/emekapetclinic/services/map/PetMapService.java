@@ -1,13 +1,13 @@
 package com.javastriker.emekapetclinic.services.map;
 
 import com.javastriker.emekapetclinic.model.Pet;
-import com.javastriker.emekapetclinic.services.CrudService;
+import com.javastriker.emekapetclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Pet findById(Long id) {
         return super.findById(id);

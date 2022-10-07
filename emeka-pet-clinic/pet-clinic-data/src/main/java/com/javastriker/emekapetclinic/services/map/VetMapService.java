@@ -1,13 +1,13 @@
 package com.javastriker.emekapetclinic.services.map;
 
 import com.javastriker.emekapetclinic.model.Vet;
-import com.javastriker.emekapetclinic.services.CrudService;
+import com.javastriker.emekapetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class VetMapService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
@@ -36,5 +36,10 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements Crud
     @Override
     public void delete(Vet vet) {
         super.findAll();
+    }
+
+    @Override
+    public long count() {
+        return super.map.values().size();
     }
 }

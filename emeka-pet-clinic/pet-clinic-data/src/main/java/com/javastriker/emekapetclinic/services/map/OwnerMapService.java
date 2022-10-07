@@ -1,13 +1,14 @@
 package com.javastriker.emekapetclinic.services.map;
 
 import com.javastriker.emekapetclinic.model.Owner;
-import com.javastriker.emekapetclinic.services.CrudService;
+
+import com.javastriker.emekapetclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
         return super.findById(id);
@@ -36,5 +37,15 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     @Override
     public void delete(Owner object) {
         super.delete(object);
+    }
+
+    @Override
+    public Owner findByLastName(String lastname) {
+        return super.map.values().stream().filter(owner -> owner.getLastName().equals(lastname)).findFirst().get();
+    }
+
+    @Override
+    public long count(){
+        return super.map.values().size();
     }
 }
